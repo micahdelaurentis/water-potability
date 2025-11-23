@@ -8,7 +8,7 @@ import yaml
 n_estimators = yaml.safe_load(open('params.yaml'))['model_building']['n_estimators']
 
 
-train_data = pd.read_csv('./data/processed/train_processed.csv')
+train_data = pd.read_csv('./data/processed/train_processed_median.csv')
 
 X_train = train_data.drop(columns = ['Potability'], axis = 1)
 y_train = train_data['Potability']
